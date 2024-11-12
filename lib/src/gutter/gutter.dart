@@ -74,7 +74,7 @@ class GutterWidget extends StatelessWidget {
           _issueColumn: FixedColumnWidth(issueColumnWidth),
           _foldingColumn: FixedColumnWidth(foldingColumnWidth),
         },
-        defaultVerticalAlignment: TableCellVerticalAlignment.middle,
+        defaultVerticalAlignment: TableCellVerticalAlignment.baseline,
         children: tableRows,
       ),
     );
@@ -90,12 +90,11 @@ class GutterWidget extends StatelessWidget {
         continue;
       }
 
-      tableRows[lineIndex].children![_lineNumberColumn] = Center(
-          child: Text(
+      tableRows[lineIndex].children![_lineNumberColumn] = Text(
         style.showLineNumbers ? '${i + 1}' : ' ',
         style: style.textStyle,
         textAlign: style.textAlign,
-      ));
+      );
     }
   }
 
