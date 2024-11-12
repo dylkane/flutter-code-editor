@@ -364,12 +364,19 @@ class _CodeFieldState extends State<CodeField> {
       ),
     );
 
-    return SingleChildScrollView(
+    // return SingleChildScrollView(
+    //   padding: EdgeInsets.only(
+    //     right: widget.padding.right,
+    //   ),
+    //   scrollDirection: Axis.horizontal,
+    //   controller: _horizontalCodeScroll,
+    //   child: intrinsic,
+    // );
+
+    return Padding(
       padding: EdgeInsets.only(
         right: widget.padding.right,
       ),
-      scrollDirection: Axis.horizontal,
-      controller: _horizontalCodeScroll,
       child: intrinsic,
     );
   }
