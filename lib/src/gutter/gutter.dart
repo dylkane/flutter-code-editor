@@ -90,11 +90,12 @@ class GutterWidget extends StatelessWidget {
         continue;
       }
 
-      tableRows[lineIndex].children![_lineNumberColumn] = Text(
+      tableRows[lineIndex].children![_lineNumberColumn] = Center(
+          child: Text(
         style.showLineNumbers ? '${i + 1}' : ' ',
         style: style.textStyle,
         textAlign: style.textAlign,
-      );
+      ));
     }
   }
 
