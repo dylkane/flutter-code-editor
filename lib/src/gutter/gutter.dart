@@ -74,7 +74,7 @@ class GutterWidget extends StatelessWidget {
           _issueColumn: FixedColumnWidth(issueColumnWidth),
           _foldingColumn: FixedColumnWidth(foldingColumnWidth),
         },
-        defaultVerticalAlignment: TableCellVerticalAlignment.baseline,
+        defaultVerticalAlignment: TableCellVerticalAlignment.bottom,
         children: tableRows,
       ),
     );
