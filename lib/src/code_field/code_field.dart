@@ -340,7 +340,10 @@ class _CodeFieldState extends State<CodeField> {
 
   // Wrap the codeField in a horizontal scrollView
   Widget _wrapInScrollView(
-      Widget codeField, TextStyle textStyle, double minWidth) {
+    Widget codeField,
+    TextStyle textStyle,
+    double minWidth,
+  ) {
     final intrinsic = IntrinsicWidth(
       child: Column(
         mainAxisSize: MainAxisSize.min,
@@ -360,6 +363,15 @@ class _CodeFieldState extends State<CodeField> {
         ],
       ),
     );
+
+    if (widget.wrap) {
+      return Padding(
+        padding: EdgeInsets.only(
+          right: widget.padding.right,
+        ),
+        child: intrinsic,
+      );
+    }
 
     return SingleChildScrollView(
       padding: EdgeInsets.only(
